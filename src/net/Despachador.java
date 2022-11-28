@@ -1,9 +1,8 @@
 package net;
 
-import gui.Jugador;
-import gui.VentanaPrincipal;
+import gui.*;
 
-import java.awt.Color;
+import java.awt.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;

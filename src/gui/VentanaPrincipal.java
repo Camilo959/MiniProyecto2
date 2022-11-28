@@ -15,6 +15,7 @@ public class VentanaPrincipal extends JFrame { //hereda las propiedades de la cl
     Container panel;  //contenedor de la ventana, un atributo de la ventana
     public Tablero lienzo; // se vuelve global a la clase
     public Despachador despachador;
+    public int sisascole;
 
     public VentanaPrincipal() { //metodo constructor de la clase
         super("Nivel 1");
@@ -37,9 +38,10 @@ public class VentanaPrincipal extends JFrame { //hereda las propiedades de la cl
     }
 
     public void conectar() {
-        String color = JOptionPane.showInputDialog(this,"Color: ");
+        String color = JOptionPane.showInputDialog(this,"Color: ");        
         despachador.send("login:"+color);
         lienzo.jugadorPresente = color;
 
+        //  jComboBox1.getSelectedItem();
     }
 }

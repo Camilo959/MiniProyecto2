@@ -3,7 +3,8 @@ package net;
 import gui.Tablero;
 import gui.VentanaPrincipal;
 
-import  java.net.Socket;
+import  java.net.*;
+import java.io.*;
 
 public class Cliente {
     public void conectar(VentanaPrincipal gui, Tablero tablero) {

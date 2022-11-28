@@ -52,6 +52,7 @@ public class Tablero extends Canvas implements KeyListener {
 
     public Tablero() { // constructor de la clase tablero
         super();
+
     
         setSize(750, 777);
         setBackground(new Color(22,90,20));
