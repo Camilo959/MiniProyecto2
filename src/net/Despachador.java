@@ -1,7 +1,7 @@
 package net;
 
 import gui.Jugador;
-import gui.VentanaPrincipal;
+import gui.VentanaNivel1;
 
 import java.awt.Color;
 
@@ -20,7 +20,7 @@ public class Despachador extends Thread{
     private String tipo = "lector";
     private Socket socket;
 
-    public VentanaPrincipal gui = null;
+    public VentanaNivel1 gui = null;
     public ArrayList<Despachador> escritores = new ArrayList<>();
     public HashMap<String, Jugador> jugadores = new HashMap<>();
 
@@ -53,7 +53,7 @@ public class Despachador extends Thread{
         String inputLine;
 
         while ((inputLine = in.readLine()) != null) {
-            
+
             System.out.println("Recibido: " + inputLine);
 
             if (gui != null) { // Cliente
@@ -63,14 +63,19 @@ public class Despachador extends Thread{
                     System.out.println("leyendo jugador: " + jugador);
                     String[] data = jugador.split(",");
                     Color c = Color.black;
-                    
+
                     switch (data[0]) {
-                        case "rojo": c = Color.red;
-                        break;
-                        case "verde": c = Color.green;
-                        break;
-                        case "azul": c = Color.blue;
-                        break;
+                        case "Normal": c = new Color(231, 196, 193);break;
+                        case "Negro": c = new Color(0,0,0);break;
+                        case "Naranja": c = new Color(238, 90, 45);break;
+                        case "Morado": c = new Color(126, 32, 92);break;
+                        case "Verde": c = new Color(28, 241, 6, 255);break;
+                        case "Marrón": c = new Color(87, 61, 28);break;
+                        case "Gris": c = new Color(79, 95, 96);break;
+                        case "Azul ": c = new Color(6, 153, 245);break;
+                        case "Rojo": c = new Color(213, 11, 14);break;
+                        case "Blanco": c = new Color(255,255,255);break;
+                        case "Rosa": c = new Color(239, 39, 222, 255);
                     }
 
                     gui.lienzo.jugadores.put(data[0] , new Jugador(data[0], c, Integer.parseInt(data[1]), Integer.parseInt(data[2])));
@@ -85,13 +90,13 @@ public class Despachador extends Thread{
                     Color c = Color.black;
                     switch (datos[1]) {
                         case "rojo": c = Color.red;
-                        break;
+                            break;
                         case "verde": c = Color.green;
-                        break;
+                            break;
                         case "azul": c = Color.blue;
-                        break;
+                            break;
                     }
-                    jugadores.put(datos[1] , new Jugador(datos[1], c, 30, 30));
+                    jugadores.put(datos[1] , new Jugador(datos[1], c, 15, 15));
                 } else if(datos[0].equals("mover")) {
                     String[] datosJugador = datos[1].split(",");
                     jugadores.get(datosJugador[0]).x = Integer.parseInt(datosJugador[1]);
@@ -103,7 +108,7 @@ public class Despachador extends Thread{
                 for (Jugador e: jugadores.values()) {
                     lista[index++] = e.nickname + "," + e.x + "," + e.y;
                 }
-                
+
                 for (Despachador e: escritores) {
                     e.send(String.join("#", lista));
                 }
