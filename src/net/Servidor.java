@@ -10,7 +10,6 @@ public class Servidor {
         ArrayList<Despachador> escritores = new ArrayList<>();
 
         try {
-
             ServerSocket serverSocket = new ServerSocket(portNumber);
 
             while (true) {
@@ -23,10 +22,8 @@ public class Servidor {
                 Despachador escritor = new Despachador(clientSocket, "escritor");
                 escritores.add(escritor);
                 escritor.start();
-
                 //clientSocket.close();
             }
-
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }

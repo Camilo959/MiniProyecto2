@@ -1,9 +1,8 @@
 package net;
 
-import gui.Tablero;
-import gui.VentanaNivel1;
-
 import  java.net.Socket;
+import gui.VentanaNivel1;
+import gui.Tablero;    
 
 public class Cliente {
     public void conectar(VentanaNivel1 gui, Tablero tablero) {

@@ -9,7 +9,7 @@ public class Laberinto {
     private int[][] mapa;
     private Color colorlab;
 
-    public Laberinto(int Nfila, int nColumnas, int altoB, int anchoB, int[][] mapa,Color colorLaberinto){
+    public Laberinto(int Nfila, int nColumnas, int altoB, int anchoB, int[][] mapa,Color colorLaberinto) {
         this.altoB = altoB;
         this.anchoB = anchoB;
         this.mapa = mapa;
@@ -18,12 +18,12 @@ public class Laberinto {
         this.colorlab = colorLaberinto;
     }
 
-    public void paint(Graphics g){
+    public void paint(Graphics g) {
         int[][] laberinto = obtenerLaberinto();
 
         for(fila = 0; fila < nFilas; fila++){
-            for(columna = 0; columna < nColumnas; columna++){
-                if(laberinto[fila][columna] == 1){
+            for(columna = 0; columna < nColumnas; columna++) {
+                if(laberinto[fila][columna] == 1){ 
                     g.setColor(colorlab);
                     g.fillRect(columna*anchoB, fila*altoB, anchoB, altoB);
                 }

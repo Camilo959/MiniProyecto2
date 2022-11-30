@@ -1,9 +1,7 @@
-import gui.VentanaPrincipal;
+import static gui.VentanaPrincipal.ventana;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        VentanaPrincipal v = new VentanaPrincipal();
-
-        v.setVisible(true);
-    }
+    public static void main(String[] args) {
+        ventana.setVisible(true);
+    }       
 }
