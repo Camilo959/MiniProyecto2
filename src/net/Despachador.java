@@ -1,6 +1,7 @@
 package net;
 
 import gui.Jugador;
+import gui.Tablero;
 import gui.VentanaNivel1;
 
 import java.awt.*;
@@ -78,7 +79,7 @@ public class Despachador extends Thread{
                         case "Rosa": c = new Color(239, 39, 222, 255);break;
                     }
 
-                    gui.lienzo.jugadores.put(data[0] , new Jugador(data[0], c, Integer.parseInt(data[1]), Integer.parseInt(data[2])));
+                    Tablero.jugadores.put(data[0] , new Jugador(data[0], c, Integer.parseInt(data[1]), Integer.parseInt(data[2])));
                 }
                 gui.lienzo.repaint();
             }
