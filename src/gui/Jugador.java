@@ -10,7 +10,6 @@ public class Jugador {
     public int y;
 
     public Jugador(String n, Color l, int x, int y) {
-
         nickname = n;
         login = l;
         this.x = x;

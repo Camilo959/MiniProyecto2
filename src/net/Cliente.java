@@ -1,13 +1,13 @@
 package net;
 
 import gui.Tablero;
-import gui.VentanaPrincipal;
+import gui.VentanaNivel1;
 
 import  java.net.*;
 import java.io.*;
 
 public class Cliente {
-    public void conectar(VentanaPrincipal gui, Tablero tablero) {
+    public void conectar(VentanaNivel1 gui, Tablero tablero) {
         String hostName = "localhost";
         int portNumber = 1234;
 
@@ -27,6 +27,5 @@ public class Cliente {
             System.out.println("Error: " + e.getMessage());
 
         }
-
     }
 }
