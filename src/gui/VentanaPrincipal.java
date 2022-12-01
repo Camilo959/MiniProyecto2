@@ -113,10 +113,9 @@ public class VentanaPrincipal extends JFrame {
     //iniciar la segunda ventana
     public void iniciarVentana2() {
         btnIniciar.addActionListener(new ActionListener() {
-        
             @Override
             public void actionPerformed(ActionEvent e) {
-                ventana.setVisible(false);
+                //ventana.setVisible(false);
                 colorBola = (String)listaColores.getSelectedItem();
                 jugadorLab = TFnombre.getText();
                 if(jugadorLab.length() == 0){

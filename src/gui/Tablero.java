@@ -9,8 +9,7 @@ import java.util.HashMap;
 
 public class Tablero extends Canvas implements KeyListener {
     
-    private Color colorLaberinto = new Color(56,61,59); //Color paredes ...133,146,158
-    //56,61,59
+    private Color colorLaberinto = new Color(56,61,59); 
     private final int nFilas = 51;
     private final int nColumnas = 81;
     private final int altoB = 15;

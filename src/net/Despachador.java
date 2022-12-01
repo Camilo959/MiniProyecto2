@@ -88,7 +88,7 @@ public class Despachador extends Thread{
                         case "Café"   :  c = new Color(81, 60, 44);break;
 
                     }
-                    jugadores.put(datos[1] , new Jugador(datos[1], c, 1185,720));//pos de inicio: x=1185 y=735
+                    jugadores.put(datos[1] , new Jugador(datos[1], c, 15,15));//pos de inicio: x=1185 y=735
                 } else if(datos[0].equals("mover")) {
                     String[] datosJugador = datos[1].split(",");
                     jugadores.get(datosJugador[0]).x = Integer.parseInt(datosJugador[1]);

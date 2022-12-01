@@ -25,7 +25,7 @@ public class VentanaNiveles extends JFrame {
         this.setLocationRelativeTo(null);
         this.setContentPane(fondo);
         this.setResizable(false);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLayout(null);
     }
 
