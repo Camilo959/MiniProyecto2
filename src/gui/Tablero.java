@@ -70,7 +70,7 @@ public class Tablero extends Canvas implements KeyListener {
         {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1},
     };
 
-    public HashMap<String, Jugador> jugadores = new HashMap<>();
+    public static HashMap<String, Jugador> jugadores = new HashMap<>();
     public String jugadorPresente = "";
     public static Despachador despachador;
     public Laberinto lab = new Laberinto(nFilas, nColumnas, altoB, anchoB, laberinto,colorLaberinto);
