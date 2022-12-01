@@ -27,7 +27,6 @@ public class VentanaNivel1 extends JFrame {
         c.conectar(this, lienzo);
 
         conectar();
-
     }
 
     public void conectar() {
