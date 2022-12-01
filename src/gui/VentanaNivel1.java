@@ -13,7 +13,7 @@ public class VentanaNivel1 extends JFrame {
    
     public VentanaNivel1() {
         super("Nivel 1");
-        setSize(1215, 798);
+        setSize(1215, 800);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
