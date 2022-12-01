@@ -1,6 +1,6 @@
 package net;
 
-import java.awt.Color;
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,6 +9,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import gui.Jugador;
+import gui.Tablero;
 import gui.VentanaNivel1;
 
 public class Despachador extends Thread{
@@ -63,9 +64,8 @@ public class Despachador extends Thread{
                         case "Amarillo"   :  c = new Color(240, 246, 0);break;
                         case "Verde Amarilloso"   :  c = new Color(175, 252, 65);break;
                         case "Café"   :  c = new Color(81, 60, 44);break;
-                    }
-
-                    gui.lienzo.jugadores.put(data[0] , new Jugador(data[0], c, Integer.parseInt(data[1]), Integer.parseInt(data[2])));
+                    }  
+                    Tablero.jugadores.put(data[0] , new Jugador(data[0], c, Integer.parseInt(data[1]), Integer.parseInt(data[2])));
                 }
                 gui.lienzo.repaint();
             }

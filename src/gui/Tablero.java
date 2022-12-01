@@ -1,14 +1,13 @@
 package gui;
 
-import javax.swing.*;
 import net.Despachador;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.HashMap;
 
 public class Tablero extends Canvas implements KeyListener {
-    
     private Color colorLaberinto = new Color(56,61,59); 
     private final int nFilas = 51;
     private final int nColumnas = 81;
@@ -71,8 +70,8 @@ public class Tablero extends Canvas implements KeyListener {
     };
 
     public static HashMap<String, Jugador> jugadores = new HashMap<>();
-    public String jugadorPresente = "";
     public static Despachador despachador;
+    public String jugadorPresente = "";
     public Laberinto lab = new Laberinto(nFilas, nColumnas, altoB, anchoB, laberinto,colorLaberinto);
 
     public Tablero() { // constructor de la clase tablero
@@ -94,8 +93,7 @@ public class Tablero extends Canvas implements KeyListener {
     public void keyTyped(KeyEvent keyEvent) {}
 
     @Override
-    public void keyPressed(KeyEvent e) { // la idea esta en el keycode
-
+    public void keyPressed(KeyEvent e) {
         int [][] laberinto = lab.obtenerLaberinto();
         int x_ = jugadores.get(jugadorPresente).x;
         int y_ = jugadores.get(jugadorPresente).y;
